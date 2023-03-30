@@ -1,0 +1,26 @@
+package com.example.thirdlessonrailwayticket;
+
+import androidx.appcompat.app.AppCompatActivity;
+import android.os.Bundle;
+import android.widget.TextView;
+
+public class MainActivity extends AppCompatActivity {
+    private int adult = 9;
+    private int kid = 11;
+    private int retiree = 5;
+    private int price = 70;
+    int priceForAll = (int) ((adult * price + kid * 0.5 * price) + (retiree * 0.7 * price));
+    int people = adult + kid + retiree;
+    RailwayTicket railwayTicket = new RailwayTicket(people, priceForAll);
+    private TextView infoOut;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        infoOut = findViewById(R.id.possibilityOut);
+        infoOut.setText(railwayTicket.toString());
+
+    }
+}
