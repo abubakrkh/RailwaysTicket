@@ -1,0 +1,21 @@
+package com.example.thirdlessonrailwayticket;
+
+public class RailwayTicket {
+    private int people;
+    private int priceTicket;
+
+
+    public RailwayTicket(int people, int priceTicket) {
+        this.people = people;
+        this.priceTicket = priceTicket;
+
+    }
+
+    @Override
+    public String toString() {
+        return "Пассажиры " + people +
+                ". Цена " + priceTicket +
+                " монет.";
+    }
+}
+
